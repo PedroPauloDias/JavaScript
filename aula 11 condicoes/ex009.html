@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onde voce mora</title>
+  
+
+
+
+
+</head>
+<body>
+     você mora aonde ? <input type="text" name="txtpais" id="txtpais">
+     <input type="button" value="verificar" onclick="consultar()">
+
+   <div id="res"></div>
+   <script>
+       function consultar() {
+           var pais = document.getElementById("txtpais")
+           var res = document.getElementById('res')
+           var pais = (pais.value)
+           res.innerHTML = ` <p>O seu pais de origem é <strong>${pais}</strong></p> `
+           if (pais == 'Brasil') {
+               res.innerHTML += `<p>você é um <strong>nativo</strong></p> `
+
+           } else {
+               res.innerHTML += `<p>você é um <strong>extrangeiro</strong></p>` 
+           }
+       }
+
+
+
+   </script>
+    
+</body>
+</html>
